@@ -47,5 +47,3 @@ war {
     webXml = file('src/someWeb.xml') // copies a file to WEB-INF/web.xml
 }
 // END SNIPPET customization
-stopPort = 9451
-httpPort = 8080
