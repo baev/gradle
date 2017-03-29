@@ -25,4 +25,3 @@ dependencies {
 
 httpPort = 8080
 stopPort = 9451
-stopKey = 'foo'
