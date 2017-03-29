@@ -18,9 +18,11 @@ package org.gradle.api.tasks
 
 import org.gradle.integtests.fixtures.AbstractIntegrationSpec
 import org.gradle.integtests.fixtures.LocalBuildCacheFixture
+import org.gradle.util.MustFixForV4
 
 class CopyTaskChildSpecIntegrationTest extends AbstractIntegrationSpec implements LocalBuildCacheFixture {
 
+    @MustFixForV4
     def "changing child specs of the copy task while executing is deprecated"() {
         given:
         setupCopyTaskModifyingChildSpecsAtExecutionTime()

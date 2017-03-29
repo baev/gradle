@@ -18,10 +18,12 @@ package org.gradle.plugin.use
 
 import org.gradle.integtests.fixtures.AbstractIntegrationSpec
 import org.gradle.test.fixtures.file.LeaksFileHandles
+import org.gradle.util.MustFixForV4
 import org.gradle.util.Requires
 import org.gradle.util.TestPrecondition
 
 //These tests depend on https://plugins.gradle.org
+@MustFixForV4
 @Requires(TestPrecondition.ONLINE)
 @LeaksFileHandles
 class DeployedPortalIntegrationSpec extends AbstractIntegrationSpec {

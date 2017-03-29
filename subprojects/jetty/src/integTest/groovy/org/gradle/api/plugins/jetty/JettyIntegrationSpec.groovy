@@ -19,6 +19,7 @@ package org.gradle.api.plugins.jetty
 import org.gradle.integtests.fixtures.AbstractIntegrationSpec
 import org.gradle.test.fixtures.file.TestFile
 import org.gradle.test.fixtures.server.http.CyclicBarrierHttpServer
+import org.gradle.util.MustFixForV4
 import org.gradle.util.ports.ReleasingPortAllocator
 import org.junit.Rule
 import spock.lang.Timeout
@@ -97,6 +98,7 @@ class JettyIntegrationSpec extends AbstractIntegrationSpec {
         }
     }
 
+    @MustFixForV4
     def "emits deprecation warning"() {
         given:
         buildFile << "apply plugin: 'jetty'"

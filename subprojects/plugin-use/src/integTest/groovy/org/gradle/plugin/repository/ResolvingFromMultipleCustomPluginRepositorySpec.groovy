@@ -22,6 +22,7 @@ import org.gradle.test.fixtures.Repository
 import org.gradle.test.fixtures.file.LeaksFileHandles
 import org.gradle.test.fixtures.maven.MavenFileRepository
 import org.gradle.test.fixtures.plugin.PluginBuilder
+import org.gradle.util.MustFixForV4
 import org.gradle.util.Requires
 import org.gradle.util.TestPrecondition
 import spock.lang.Issue
@@ -202,6 +203,7 @@ class ResolvingFromMultipleCustomPluginRepositorySpec extends AbstractDependency
         repoType << [IVY, MAVEN]
     }
 
+    @MustFixForV4
     @Requires(TestPrecondition.ONLINE)
     def "Can opt-in to plugin portal"() {
         given:
